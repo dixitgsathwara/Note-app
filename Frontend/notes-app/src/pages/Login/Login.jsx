@@ -30,12 +30,15 @@ export const Login = () => {
         localStorage.setItem('token',response.data.accesstoken)
         navigate('/dashboard')
       }
+      else{
+        setError("there is no user exist with this email");
+      }
     } catch (error) {
       if(error.response && error.response.data && error.response.data.message){
         setError(error.response.data.message)
       }
       else{
-        setError("An unaccepted error occur")
+        setError("An unaccepted error occur");
       }
     }
   }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Navbar } from '../../components/Navbar/Navbar'
 import { Link, useNavigate } from 'react-router-dom'
 import { PasswordInput } from '../../components/Input/PasswordInput'
-import { validateEmail } from '../../utils/helper'
+import { validateEmail,validatePassword } from '../../utils/helper'
 import axiosInstance from '../../utils/axiosInstance'
 export const SignUp = () => {
   const [name,setName]=useState("")
@@ -22,6 +22,10 @@ export const SignUp = () => {
     }
     if(!password){
       setError("Please enter a password");
+      return;
+    }
+    if(!validatePassword(password)){
+      setError("Enter password which contain At least one uppercase letter,At least one lowercase letter,At least one digit and the length should be 6 or more characters.");
       return;
     }
     setError("");

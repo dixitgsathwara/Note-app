@@ -2,6 +2,10 @@ export const validateEmail = (email) =>{
     const regex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
+export const validatePassword = (pass) =>{
+    const regex=/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/ ;
+    return regex.test(pass);
+}
 export const getInitial =(name)=>{
     if(!name){return "";}
     const word=name.split(" ");
