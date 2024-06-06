@@ -1,1 +1,1 @@
-export const BASE_URL="http://localhost:5001"
+export const BASE_URL="https://note-app-y0lk.onrender.com/"
