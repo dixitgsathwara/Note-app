@@ -1,4 +1,4 @@
-# My Project
+# Note-app
 
 [![Vercel](https://vercel.com/button)](https://notes-i68910kew-dixit-sathwaras-projects.vercel.app)
 
